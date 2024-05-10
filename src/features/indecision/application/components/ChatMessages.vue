@@ -19,11 +19,11 @@ interface ChatMessagesProps {
   messages: ChatMessagesInterface[];
 }
 
-const {messages} = defineProps<ChatMessagesProps>();
+const props = defineProps<ChatMessagesProps>();
 
 const chatRef = ref<HTMLDivElement | null>(null);
 
-watch(messages, () => {
+watch(props, () => {
   nextTick(() => {
     chatRef?.value?.scrollTo({
       top: chatRef?.value?.scrollHeight,
