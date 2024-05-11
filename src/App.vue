@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <IndecisionView/>
-  </div>
+  <PokemonGame/>
 </template>
 
 <script lang="ts" setup>
-
-import IndecisionView from '@/features/indecision/application/IndecisionView.vue';
+import PokemonGame from '@/features/pokemon/pages/PokemonGame.vue';
 </script>
