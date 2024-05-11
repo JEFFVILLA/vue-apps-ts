@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col pb-18 select-none items-center overflow-hidden flex-wrap w-full gap-4">
+  <section class="flex flex-col pt-4 pb-12 select-none items-center overflow-hidden flex-wrap w-full lg:w-96 gap-4">
     <button v-for="{name, id} in pokemonsOptions" :key="id"
             :class="[
                 'capitalize disabled:shadow-none disabled:cursor-not-allowed',
@@ -32,7 +32,7 @@ const emit = defineEmits<(e: 'selectedOption', id: number) => void>();
 
 <style scoped>
 button {
-  @apply cursor-pointer bg-white shadow-md rounded-lg p-3 m-2 w-40 text-center transition-all;
+  @apply cursor-pointer bg-white shadow-md rounded-lg p-2 w-32 truncate h-10 text-center transition-all;
 }
 
 .correct {
