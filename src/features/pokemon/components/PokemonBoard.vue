@@ -1,9 +1,9 @@
 <template>
-  <section class="flex flex-col items-center justify-center gap-2">
+  <section class="flex flex-col w-full items-center justify-center gap-2">
     <div class="flex gap-2">
-      <div class="flex border border-gray-200 rounded-lg flex-col gap-2 px-4 py-2">
+      <div class="flex border border-gray-200 rounded-lg w-full flex-col gap-2 px-4 py-2">
         <h1 class="text-lg font-semibold">Puntaje</h1>
-        <div class="flex gap-2">
+        <div class="flex flex-col lg:flex-row gap-2 text-xs lg:text-lg">
           <span class="text">Correctas: <span class="text-green-600">{{ pointBoard.correct }}</span></span>
           <span>Incorrectas: <span class="text-red-600">{{ pointBoard.wrong }}</span> </span>
         </div>
@@ -16,7 +16,8 @@
         </button>
         <button
             @click="handleResetGame"
-            class="bg-red-400 text-white h-10 p-2 rounded-lg hover:bg-red-600 transition-all">Terminar ronda
+            class="bg-red-400 cursor-pointer  text-white h-10 w-36 text-sm p-2 rounded-lg hover:bg-red-600 transition-all">
+          Terminar ronda
         </button>
       </div>
     </div>
@@ -55,7 +56,7 @@ const handleResetGame = () => {
 <style scoped>
 
 .button-next-round {
-  @apply cursor-pointer bg-blue-500 text-white h-10 p-2 rounded-lg hover:bg-blue-700 transition-all;
+  @apply cursor-pointer bg-blue-500 text-white h-10 w-36 text-sm p-2 rounded-lg hover:bg-blue-700 transition-all;
 }
 
 .button-next-round-disabled {

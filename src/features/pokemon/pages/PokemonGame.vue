@@ -6,7 +6,7 @@
   </section>
 
   <section v-else class="bg-gray-50 flex flex-col flex-1 justify-center items-center w-screen h-screen">
-    <div class="flex flex-col items-center gap-4 h-1/6 flex-1 p-8">
+    <div class="flex flex-col items-center gap-4 h-1/6 flex-1 p-4">
       <PokemonResult :game-status="gameStatus" :pokemon="randomPokemon"/>
       <PokemonBoard :game-status="gameStatus"
                     :point-board="pointBoard"
